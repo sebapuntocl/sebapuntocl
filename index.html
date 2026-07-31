@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%23050507%22/><text x=%2250%%22 y=%2272%%22 text-anchor=%22middle%22 font-family=%22'Space Grotesk', sans-serif%22 font-weight=%22800%22 font-size=%2275%22 fill=%22%236366f1%22>S</text></svg>">
+
+<!-- PRIMARY SEO -->
+<title>Sebastián Sotelo | Senior Software Engineer · Backend · Oracle · Laravel · Chile</title>
+<meta name="description" content="Senior Software Engineer con +12 años modernizando sistemas críticos. Especialista en PHP 8.x Oracle, MySQL, PostgreSQL, arquitecturas de alta disponibilidad. Disponible para roles remotos full-time.">
+<meta name="author" content="Sebastián Sotelo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.virtual19.cl">
+
+<!-- OPEN GRAPH — LinkedIn, Facebook, WhatsApp -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://www.virtual19.cl">
+<meta property="og:locale"      content="es_CL">
+<meta property="og:site_name"   content="Sebastián Sotelo · Portfolio">
+<meta property="og:title"       content="Sebastián Sotelo | Senior Software Engineer · Chile">
+<meta property="og:description" content="+12 años modernizando sistemas críticos. Especialista en PHP 8.x / Laravel, Oracle, MySQL, PostgreSQL y arquitecturas de alta disponibilidad sobre Linux. Disponible para empleo full-time remoto.">
+<meta property="og:image"       content="https://www.virtual19.cl/assets/img/og-image.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"    content="Sebastián Sotelo — Senior Software Engineer">
+
+<!-- TWITTER / X CARD -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Sebastián Sotelo | Senior Software Engineer · Chile">
+<meta name="twitter:description" content="+12 años modernizando sistemas críticos. Especialista en PHP 8.3, Oracle, MySQL, PostgreSQL. Disponible para empleo full-time remoto.">
+<meta name="twitter:image"       content="https://www.virtual19.cl/assets/img/og-image.jpg">
+<meta name="twitter:image:alt"   content="Sebastián Sotelo — Senior Software Engineer">
+<!-- Agregue su usuario si tiene cuenta activa: -->
+<!-- <meta name="twitter:creator" content="@su_usuario"> -->
+
+<!-- JSON-LD SCHEMA — Google Rich Results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sebastián Sotelo",
+  "jobTitle": "Senior Software Engineer",
+  "url": "https://www.virtual19.cl",
+  "email": "s.sotelo.ortiz@gmail.com",
+  "telephone": "+56935434806",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "La Serena",
+    "addressRegion": "Coquimbo",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://github.com/sebapuntocl",
+    "https://www.linkedin.com/in/sebasoteloo"
+  ],
+  "knowsAbout": [
+    "PHP 8.3", "Laravel", "Oracle Database", "MySQL", "PostgreSQL",
+    "Python", "Flutter", "Debian Linux", "Microservices",
+    "Cybersecurity", "Legacy System Migration", "High Availability"
+  ]
+}
+</script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#050507',
+                            surface: '#0d0d12',
+                            primary: '#6366f1',
+                            secondary: '#a855f7',
+                            accent: '#22d3ee'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass { background: rgba(13, 13, 18, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); }
+        .text-gradient { background: linear-gradient(to right, #6366f1, #a855f7, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-grid { background-image: radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.1) 1px, transparent 0); background-size: 32px 32px; }
+        .hero-glow { position: absolute; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%); filter: blur(80px); z-index: -1; }
+        .card-hover:hover { border-color: rgba(99, 102, 241, 0.4); transform: translateY(-5px); }
+
+        @keyframes pulse-soft {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+        }
+        .animate-pulse-soft { animation: pulse-soft 3s infinite ease-in-out; }
+        
+        .flow-line {
+            background: linear-gradient(to bottom, transparent, #6366f1, transparent);
+            width: 2px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .flow-line::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 20px;
+            background: #22d3ee;
+            animation: flow-down 2s infinite linear;
+        }
+        @keyframes flow-down {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(200%); }
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-gray-300 font-sans antialiased bg-grid">
+
+    <nav class="fixed w-full z-[100] px-4 md:px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-2xl p-3 md:p-4 shadow-2xl">
+            <span class="font-display text-xl font-extrabold tracking-tighter text-white">SEBA.<span class="text-brand-primary">DEV</span></span>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <div class="flex gap-6 text-sm font-medium border-r border-white/10 pr-6 text-gray-400">
+                    <a href="#sobre-mi" class="hover:text-white transition">Sobre mí</a>
+                    <a href="#proyectos" class="hover:text-white transition">Proyectos</a>
+                    <a href="#skills" class="hover:text-white transition">Stack</a>
+                </div>
+                
+                <div class="flex gap-5 text-lg">
+                    <a href="https://github.com/sebapuntocl" target="_blank" class="text-gray-500 hover:text-white transition-all"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sebasoteloo" target="_blank" class="text-gray-500 hover:text-brand-primary transition-all"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <a href="mailto:s.sotelo.ortiz@gmail.com" class="bg-brand-primary hover:bg-brand-secondary text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg shadow-brand-primary/20">
+                Hablemos
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+        <div class="hero-glow -top-20 -right-20"></div>
+        <div class="hero-glow -bottom-20 -left-20" style="background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);"></div>
+        
+        <div class="max-w-5xl mx-auto w-full relative z-10">
+            <div data-aos="fade-up" data-aos-duration="1000" class="mt-10">
+                <span class="px-4 py-2 rounded-full bg-brand-primary/10 text-brand-accent text-xs font-bold uppercase tracking-widest border border-brand-primary/20">
+                    <span class="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2"></span> Disponible para nuevos desafíos
+                </span>
+                <h1 class="font-display text-6xl md:text-8xl font-extrabold mt-8 mb-6 leading-tight text-white tracking-tighter">
+                    Sebastian Sotelo <br>
+                    <span class="text-gradient">Software Engineer</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-400 leading-relaxed mb-10 max-w-3xl">
+                    Arquitecto de soluciones con <span class="text-white font-semibold">+12 años de experiencia</span>. Especialista en modernización de sistemas críticos y despliegues de alta disponibilidad.
+                </p>
+
+                <div class="flex flex-wrap gap-6 items-center">
+                    <a href="#proyectos" class="group bg-white text-brand-dark px-8 py-4 rounded-2xl font-bold flex items-center gap-3 hover:bg-brand-accent transition-all">
+                        Ver Portafolio 
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <div class="flex gap-6 text-2xl">
+                        <a href="https://github.com/sebapuntocl" target="_blank" class="text-gray-500 hover:text-white transition-all"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sebasoteloo" target="_blank" class="text-gray-500 hover:text-brand-primary transition-all"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="400" class="mt-20 hidden lg:block bg-[#0d1117] border border-white/10 rounded-xl p-5 font-mono text-sm shadow-2xl mx-auto md:mx-0">
+                <div class="flex gap-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                    <span class="text-gray-600 ml-2 text-xs">bash — 80x24</span>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-brand-accent">seba@debian:~$ <span class="text-white">finger profile</span></p>
+                    <p class="text-gray-400">Login: ssotelo &nbsp;&nbsp; Name: Sebastian Sotelo</p>
+                    <p class="text-gray-400">Expertise: Backend, DB Arch, Security</p>
+                    <p class="text-brand-accent">seba@debian:~$ <span class="text-white">ls -la stack/</span></p>
+                    <p class="text-gray-500">total 12y</p>
+                    <p class="text-gray-400">drwxr-xr-x PHP_8.3 Laravel Oracle Python_AI Node.js</p>
+                    <p class="text-brand-accent">seba@debian:~$ <span class="animate-pulse">_</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre-mi" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-brand-accent font-display font-bold uppercase tracking-[0.2em] mb-4 text-sm">Background</h2>
+                <h3 class="text-4xl font-display font-bold text-white mb-6">"La tecnología cambia, la buena arquitectura permanece."</h3>
+                <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                    Como Ingeniero en Informática y usuario de <span class="text-white font-medium">Debian</span> por vocación, mi enfoque no es solo que el código funcione, sino que sea <span class="text-brand-primary">escalable, seguro y rentable</span>.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-3xl font-bold text-white mb-1">12+</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Años de Exp.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <p class="text-3xl font-bold text-white mb-1">50+</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Sistemas Legacy Rescatados</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-brand-primary to-brand-accent rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition-all"></div>
+                <div class="relative glass rounded-[2.5rem] p-10 flex flex-col gap-6 border-white/10 card-hover transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center text-brand-primary text-xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold">Ingeniería en Informática</p>
+                            <p class="text-sm text-gray-500">U. Santo Tomás</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xl">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold">Diplomado Ciberseguridad</p>
+                            <p class="text-sm text-gray-500">Especialista en Integridad</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-secondary/20 flex items-center justify-center text-brand-secondary text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold">La Serena, Chile</p>
+                            <p class="text-sm text-gray-500">Disponible Remoto / Híbrido</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="proyectos" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h2 class="text-brand-accent font-display font-bold uppercase tracking-[0.2em] mb-4 text-sm">Work Experience</h2>
+                <h3 class="text-4xl md:text-5xl font-display font-bold text-white">Impacto Técnico Real</h3>
+            </div>
+            
+            <div class="flex gap-4">
+                <button onclick="scrollProjects('left')" class="w-12 h-12 rounded-xl glass flex items-center justify-center text-white hover:bg-brand-primary/20 hover:border-brand-primary/50 transition-all active:scale-95">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="scrollProjects('right')" class="w-12 h-12 rounded-xl glass flex items-center justify-center text-white hover:bg-brand-primary/20 hover:border-brand-primary/50 transition-all active:scale-95">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="project-container" class="flex overflow-x-auto gap-8 pb-12 snap-x snap-mandatory scroll-smooth scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+            
+            <div class="min-w-[85vw] md:min-w-[450px] snap-center group relative glass p-10 rounded-[2.5rem] card-hover transition-all overflow-hidden flex flex-col justify-between">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-primary/10 rounded-full blur-3xl"></div>
+                <div>
+                    <div class="mb-8 w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center text-brand-primary text-2xl">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-white">Ecosistema Odontológico</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Modernización crítica de un sistema de gestión dental. Migración de lógica legacy hacia <span class="text-white">PHP 8.3</span> y optimización de procedimientos almacenados en <span class="text-white">Oracle</span>.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Oracle DB</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Legacy</span>
+                </div>
+            </div>
+
+            <div class="min-w-[85vw] md:min-w-[450px] snap-center group relative glass p-10 rounded-[2.5rem] card-hover transition-all overflow-hidden flex flex-col justify-between">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-secondary/10 rounded-full blur-3xl"></div>
+                <div>
+                    <div class="mb-8 w-14 h-14 rounded-2xl bg-brand-secondary/20 flex items-center justify-center text-brand-secondary text-2xl">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-white">Arquitectura Gestión12</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Liderazgo técnico en el desarrollo de ERPs modulares. Implementación de microservicios y despliegue sobre servidores <span class="text-white">Debian Linux</span> para el sector industrial.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-secondary uppercase">Linux Admin</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-secondary uppercase">ERP</span>
+                </div>
+            </div>
+
+            <div class="min-w-[85vw] md:min-w-[450px] snap-center group relative glass p-10 rounded-[2.5rem] card-hover transition-all overflow-hidden flex flex-col justify-between">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl"></div>
+                <div>
+                    <div class="mb-8 w-14 h-14 rounded-2xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-2xl">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-white">Seguridad Virtual19</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Auditoría y robustecimiento de APIs para procesamiento de pagos. Implementación de capas de seguridad JWT y mitigación de vulnerabilidades críticas.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Security</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Fintech</span>
+                </div>
+            </div>
+
+            <div class="min-w-[85vw] md:min-w-[450px] snap-center group relative glass p-10 rounded-[2.5rem] card-hover transition-all overflow-hidden flex flex-col justify-between">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-primary/10 rounded-full blur-3xl"></div>
+                <div>
+                    <div class="mb-8 w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center text-brand-primary text-2xl">
+                        <i class="fas fa-mobile-button"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold mb-4 text-white">App Híbrida Flutter</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Desarrollo de aplicación móvil para control de inventarios en tiempo real, integrada con backend en Python y bases de datos MySQL.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Flutter</span>
+                    <span class="px-4 py-1.5 rounded-lg bg-brand-dark/50 border border-white/5 text-xs font-bold text-brand-accent uppercase">Python</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function scrollProjects(direction) {
+            const container = document.getElementById('project-container');
+            // Calculamos el ancho de una tarjeta dinámicamente para que el scroll sea preciso
+            const cardWidth = container.querySelector('.snap-center').offsetWidth + 32; // 32 es el gap (gap-8)
+            
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            const currentScroll = container.scrollLeft;
+
+            if (direction === 'right') {
+                // Si ya estamos en el final, volvemos al principio
+                if (currentScroll >= maxScroll - 10) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            } else {
+                // Si estamos al principio, vamos al final
+                if (currentScroll <= 10) {
+                    container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                }
+            }
+        }
+    </script>
+
+    <section id="architecture" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="text-center mb-16">
+            <h2 class="text-brand-accent font-display font-bold uppercase tracking-[0.2em] mb-4 text-sm">Arquitectura de Soluciones</h2>
+            <h3 class="text-4xl font-display font-bold text-white">Cómo construyo sistemas de alta disponibilidad</h3>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative glass p-8 rounded-[2.5rem] border-brand-primary/20 overflow-hidden" data-aos="fade-right">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative glass p-10 rounded-[3rem] border-white/5 overflow-hidden" data-aos="zoom-in">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 flex flex-col items-center space-y-2">
+                    
+                    <div class="w-full flex items-center gap-5 bg-white/5 p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xl">
+                            <i class="fas fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-white font-bold">Frontend / Client</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Interface Layer</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="w-full flex items-center gap-5 bg-brand-primary/10 p-5 rounded-2xl border border-brand-primary/30 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-primary/20 flex items-center justify-center text-brand-primary text-xl">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-white font-bold">Reverse Proxy & Security</p>
+                            <p class="text-[10px] text-brand-primary uppercase font-black tracking-tighter text-xs">Nginx / SSL / JWT </p>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="w-full flex items-center gap-5 bg-white/5 p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-secondary/20 flex items-center justify-center text-brand-secondary text-xl">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-white font-bold">Backend Services</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest">Business Logic & Microservices</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="w-full animate-pulse-soft flex items-center gap-5 bg-brand-accent/10 p-6 rounded-2xl border border-brand-accent/40 shadow-lg">
+                        <div class="w-14 h-14 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-2xl shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center mb-1">
+                                <p class="text-white font-bold">Data Layer</p>
+                                <span class="text-[9px] bg-brand-accent/20 text-brand-accent px-2 py-0.5 rounded-full font-bold animate-pulse">LIVE</span>
+                            </div>
+                            <p class="text-[11px] text-brand-accent uppercase font-black">Oracle / MySQL / PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-3">
+                            <span class="text-brand-primary text-2xl">01.</span> Escalabilidad Horizontal
+                        </h4>
+                        <p class="text-gray-400">Diseño sistemas que no dependen de un solo servidor. Utilizo balanceadores de carga y contenedores para asegurar que el sistema crezca con la demanda.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-3">
+                            <span class="text-brand-primary text-2xl">02.</span> Integridad de Datos
+                        </h4>
+                        <p class="text-gray-400">Especialista en transacciones complejas. Mi fuerte es garantizar que la información en Oracle o MySQL sea consistente, incluso en fallos críticos.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2 flex items-center gap-3">
+                            <span class="text-brand-primary text-2xl">03.</span> Seguridad Inherente
+                        </h4>
+                        <p class="text-gray-400">No es un parche, es la base. Implemento hardening de servidores Linux (Debian) y protocolos de autenticación robustos desde el minuto uno.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-6 rounded-2xl bg-brand-primary/5 border border-brand-primary/10 italic text-sm text-gray-400">
+                    "Mi objetivo es construir software que me permita dormir tranquilo por la noche, sabiendo que la infraestructura es resiliente."
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="skills" class="max-w-6xl mx-auto px-6 py-28">
+        <div class="text-center mb-16">
+            <h2 class="text-brand-accent font-display font-bold uppercase tracking-[0.2em] mb-4 text-sm">skills</h2>
+            <h3 class="text-4xl font-display font-bold text-white">Tech Stack</h3>
+        </div>
+        
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-3xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-brand-primary/50 group-hover:bg-brand-primary/10 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+                        <i class="fab fa-php text-gray-400 group-hover:text-brand-primary transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">PHP 8.x / Laravel </p>
+                </div>
+
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-3xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-red-500/50 group-hover:bg-red-500/10 group-hover:shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+                        <i class="fas fa-database text-gray-400 group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">Oracle DB / MySQL / PostgreSQL</p>
+                </div>
+
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-3xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-yellow-500/50 group-hover:bg-yellow-500/10 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                        <i class="fab fa-python text-gray-400 group-hover:text-yellow-500 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">Python (FastAPI)</p>
+                </div>
+
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-4xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-green-500/50 group-hover:bg-green-500/10 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        <i class="fa-brands fa-node-js text-gray-400 group-hover:text-green-500 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">Node.js / Express</p>
+                </div>
+
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-3xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-brand-secondary/50 group-hover:bg-brand-secondary/10 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+                        <i class="fab fa-linux text-gray-400 group-hover:text-brand-secondary transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">Debian</p>
+                </div>
+
+                <div class="group cursor-default text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center text-3xl border border-white/5 transition-all duration-300 group-hover:scale-110 group-hover:border-blue-400/50 group-hover:bg-blue-400/10 group-hover:shadow-[0_0_20px_rgba(96,165,250,0.2)]">
+                        <i class="fab fa-docker text-gray-400 group-hover:text-blue-400 transition-colors"></i>
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold tracking-wider group-hover:text-white transition-colors">Docker</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <div data-aos="zoom-out">
+            <h2 class="font-display text-5xl font-bold mb-8 text-white tracking-tight"> ¿Buscas fortalecer tu equipo técnico?</h2>
+            <p class="text-gray-400 mb-12 text-lg max-w-2xl mx-auto leading-relaxed">
+               Estoy en busca de mi próximo desafío profesional a tiempo completo, donde pueda aportar mi experiencia en arquitecturas robustas y liderazgo técnico para ayudar a escalar productos globales.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:s.sotelo.ortiz@gmail.com" class="bg-brand-primary hover:bg-brand-secondary text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-xl shadow-brand-primary/30">
+                    Enviar Email
+                </a>
+                <a href="https://www.linkedin.com/in/sebasoteloo" target="_blank" class="glass hover:bg-white/10 text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://api.whatsapp.com/send?phone=56935434806&text=Hola%20Sebastian,%20vi%20tu%20portafolio%20y%20me%20gustaría%20conversar." 
+       target="_blank" 
+       class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-400 hover:scale-110 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-2xl shadow-green-500/20 transition-all z-50">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="font-display font-bold text-white mb-2 tracking-widest uppercase">Sebastián Sotelo <span class="text-brand-primary">2026</span></p>
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em] mb-8">Engineering with integrity • Chile</p>
+        <div class="flex justify-center gap-8 text-gray-500 text-sm">
+            <a href="https://github.com/sebapuntocl" target="_blank" class="hover:text-white transition">GitHub</a>
+            <a href="https://www.linkedin.com/in/sebasoteloo" target="_blank" class="hover:text-white transition">LinkedIn</a>
+            <a href="#" class="text-brand-primary hover:text-brand-accent transition">Virtual19</a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
